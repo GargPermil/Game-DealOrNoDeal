@@ -1,7 +1,7 @@
 ﻿Public Class Game_Engine
 #Region "Declare"
     Public Structure Money
-        Public amount As Integer
+        Public amount As String
         Public Active As Boolean
         Public type As Integer
     End Structure
@@ -73,6 +73,11 @@
     Public _isrunning As Boolean = True
     Public bankeroffer As Integer
     Private _Round As round
+    Public ReadOnly Property getroundremaining As Integer
+        Get
+            Return _Round.remaining_bags
+        End Get
+    End Property
 #End Region
 
 #Region "initialize"
@@ -127,6 +132,7 @@
     End Sub
 
     Private Sub initialize_moneyboard()
+        moneyboard(0).Active = True
         moneyboard(1).Active = True
         moneyboard(2).Active = True
         moneyboard(3).Active = True
@@ -152,32 +158,32 @@
         moneyboard(23).Active = True
         moneyboard(24).Active = True
         moneyboard(25).Active = True
-        moneyboard(0).amount = 0.25
-        moneyboard(1).amount = 1
-        moneyboard(2).amount = 10
-        moneyboard(3).amount = 100
-        moneyboard(4).amount = 250
-        moneyboard(5).amount = 500
-        moneyboard(6).amount = 1000
-        moneyboard(7).amount = 2500
-        moneyboard(8).amount = 5000
-        moneyboard(9).amount = 10000
-        moneyboard(10).amount = 25000
-        moneyboard(11).amount = 50000
-        moneyboard(12).amount = 75000
-        moneyboard(13).amount = 100000
-        moneyboard(14).amount = 150000
-        moneyboard(15).amount = 200000
-        moneyboard(16).amount = 300000
-        moneyboard(17).amount = 400000
-        moneyboard(18).amount = 500000
-        moneyboard(19).amount = 750000
-        moneyboard(20).amount = 1000000
-        moneyboard(21).amount = 1500000
-        moneyboard(22).amount = 2500000
-        moneyboard(23).amount = 5000000
-        moneyboard(24).amount = 7500000
-        moneyboard(25).amount = 10000000
+        moneyboard(0).amount = "0.25"
+        moneyboard(1).amount = "1"
+        moneyboard(2).amount = "10"
+        moneyboard(3).amount = "100"
+        moneyboard(4).amount = "250"
+        moneyboard(5).amount = "500"
+        moneyboard(6).amount = "1,000"
+        moneyboard(7).amount = "2,500"
+        moneyboard(8).amount = "5,000"
+        moneyboard(9).amount = "10,000"
+        moneyboard(10).amount = "25,000"
+        moneyboard(11).amount = "50,000"
+        moneyboard(12).amount = "75,000"
+        moneyboard(13).amount = "1,00,000"
+        moneyboard(14).amount = "1,50,000"
+        moneyboard(15).amount = "2,00,000"
+        moneyboard(16).amount = "3,00,000"
+        moneyboard(17).amount = "4,00,000"
+        moneyboard(18).amount = "5,00,000"
+        moneyboard(19).amount = "7,50,000"
+        moneyboard(20).amount = "10,00,000"
+        moneyboard(21).amount = "15,00,000"
+        moneyboard(22).amount = "25,00,000"
+        moneyboard(23).amount = "50,00,000"
+        moneyboard(24).amount = "75,00,000"
+        moneyboard(25).amount = "1,00,00,000"
         moneyboard(0).type = 0
         moneyboard(1).type = 0
         moneyboard(2).type = 0
@@ -192,6 +198,7 @@
         moneyboard(11).type = 0
         moneyboard(12).type = 0
         moneyboard(13).type = 1
+        moneyboard(14).type = 1
         moneyboard(15).type = 1
         moneyboard(16).type = 1
         moneyboard(17).type = 1
@@ -260,4 +267,5 @@
         average = Math.Round(average)
         bankeroffer = average
     End Sub
+
 End Class

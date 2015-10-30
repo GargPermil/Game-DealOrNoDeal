@@ -22,16 +22,15 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MoneyBoard1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.MoneyBoard2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MoneyBoard2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -47,10 +46,9 @@ Partial Class Form1
         '
         'MoneyBoard1
         '
-        Me.MoneyBoard1.Image = CType(resources.GetObject("MoneyBoard1.Image"), System.Drawing.Image)
         Me.MoneyBoard1.Location = New System.Drawing.Point(12, 44)
         Me.MoneyBoard1.Name = "MoneyBoard1"
-        Me.MoneyBoard1.Size = New System.Drawing.Size(170, 600)
+        Me.MoneyBoard1.Size = New System.Drawing.Size(350, 600)
         Me.MoneyBoard1.TabIndex = 1
         Me.MoneyBoard1.TabStop = False
         '
@@ -58,7 +56,7 @@ Partial Class Form1
         '
         Me.PictureBox2.Location = New System.Drawing.Point(364, 647)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(980, 77)
+        Me.PictureBox2.Size = New System.Drawing.Size(500, 77)
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
         '
@@ -70,14 +68,21 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 3
         Me.PictureBox3.TabStop = False
         '
-        'MoneyBoard2
+        'Button1
         '
-        Me.MoneyBoard2.Image = CType(resources.GetObject("MoneyBoard2.Image"), System.Drawing.Image)
-        Me.MoneyBoard2.Location = New System.Drawing.Point(184, 44)
-        Me.MoneyBoard2.Name = "MoneyBoard2"
-        Me.MoneyBoard2.Size = New System.Drawing.Size(170, 600)
-        Me.MoneyBoard2.TabIndex = 4
-        Me.MoneyBoard2.TabStop = False
+        Me.Button1.Location = New System.Drawing.Point(685, 162)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(675, 136)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 5
         '
         'Form1
         '
@@ -85,7 +90,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1356, 736)
-        Me.Controls.Add(Me.MoneyBoard2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.MoneyBoard1)
@@ -96,7 +102,6 @@ Partial Class Form1
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MoneyBoard2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,6 +110,7 @@ Partial Class Form1
     Friend WithEvents MoneyBoard1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents MoneyBoard2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 
 End Class
