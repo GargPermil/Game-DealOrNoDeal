@@ -69,13 +69,60 @@
     Private bags(25) As bag
     Private cplayer As player
     Dim remainingbag As Integer = 26
-    Public wonamount As Integer = 0
-    Public _isrunning As Boolean = True
-    Public bankeroffer As Integer
+    Private _wonamount As Integer = 0
+    Private _isrunning As Boolean = True
+    Private _bankeroffer As Integer
     Private _Round As round
+    Private _previousbankoffer As New ArrayList()
+#End Region
+
+
+#Region "Property"
     Public ReadOnly Property getroundremaining As Integer
         Get
             Return _Round.remaining_bags
+        End Get
+    End Property
+
+    Public ReadOnly Property getroundcompleted As Boolean
+        Get
+            Return Not _Round.isactive
+        End Get
+    End Property
+
+    Public ReadOnly Property getgamecompleted As Boolean
+        Get
+            Return Not _isrunning
+        End Get
+    End Property
+
+    Public ReadOnly Property PreviousBankerOffer As ArrayList
+        Get
+            Return _previousbankoffer
+        End Get
+    End Property
+
+    Public ReadOnly Property Get_Won_Money As Integer
+        Get
+            Return _wonamount
+        End Get
+    End Property
+
+    Public ReadOnly Property get_Banker_offer As Integer
+        Get
+            Return _bankeroffer
+        End Get
+    End Property
+
+    Public ReadOnly Property get_player_bag As Integer
+        Get
+            Return cplayer.bag + 1
+        End Get
+    End Property
+
+    Public ReadOnly Property get_player_name As String
+        Get
+            Return cplayer.name
         End Get
     End Property
 #End Region
@@ -85,7 +132,7 @@
         initialize_moneyboard()
         initialize_bags()
         cplayer.name = pname
-        cplayer.bag = bagno
+        cplayer.bag = bagno - 1
         _Round.roundno = 1
         _Round.isactive = True
         _Round.remaining_bags = 6
@@ -213,12 +260,18 @@
     End Sub
 #End Region
 
-    Public Function GetRandom(ByVal Min As Integer, ByVal Max As Integer) As Integer
+
+#Region "functions"
+    Private Function GetRandom(ByVal Min As Integer, ByVal Max As Integer) As Integer
         ' by making Generator static, we preserve the same instance '
         ' (i.e., do not create new instances with the same seed over and over) '
         ' between calls '
         Static Generator As System.Random = New System.Random()
         Return Generator.Next(Min, Max)
+    End Function
+
+    Public Function isbagopened(ByVal bagno As Integer) As Boolean
+        Return bags(bagno - 1).open
     End Function
 
     Public Function openbag(ByVal bagno As Integer) As Integer
@@ -229,6 +282,9 @@
                 moneyboard(bags(_bagno).moneyidx).Active = False
                 remainingbag -= 1
                 _Round.openbag()
+                If _Round.remaining_bags = 0 Then
+                    makedealamount()
+                End If
                 Return moneyboard(bags(_bagno).moneyidx).amount
             End If
         ElseIf remainingbag = 2 Then
@@ -236,20 +292,17 @@
             moneyboard(bags(_bagno).moneyidx).Active = False
             For i As Integer = 0 To 25
                 If bags(i).open = False Then
-                    wonamount = moneyboard(bags(i).moneyidx).amount
+                    _wonamount = moneyboard(bags(i).moneyidx).amount
                     _isrunning = False
                 End If
             Next
-        End If
-        If _Round.isactive = False Then
-            makedealamount()
         End If
         Return 0
     End Function
 
     Public Sub DealOrNoDeal(ByVal deal As String)
         If deal = 0 Then
-            wonamount = bankeroffer
+            _wonamount = _bankeroffer
             _isrunning = False
         Else
             _Round.nextround()
@@ -265,7 +318,10 @@
         Next
         average = total_amount / remainingbag
         average = Math.Round(average)
-        bankeroffer = average
+        If _bankeroffer <> 0 Then
+            _previousbankoffer.Insert(0, _bankeroffer)
+        End If
+        _bankeroffer = average
     End Sub
-
+#End Region
 End Class
