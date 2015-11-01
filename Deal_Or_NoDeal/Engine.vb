@@ -127,6 +127,11 @@
     End Property
 #End Region
 
+#Region "Events"
+    Public Event GameComplete()
+    Public Event DealOrNoDealEvent()
+#End Region
+
 #Region "initialize"
     Sub New(ByVal pname As String, ByVal bagno As Integer)
         initialize_moneyboard()
@@ -284,6 +289,7 @@
                 _Round.openbag()
                 If _Round.remaining_bags = 0 Then
                     makedealamount()
+                    RaiseEvent DealOrNoDealEvent()
                 End If
                 Return moneyboard(bags(_bagno).moneyidx).amount
             End If
@@ -304,7 +310,8 @@
         If deal = 0 Then
             _wonamount = _bankeroffer
             _isrunning = False
-        Else
+            RaiseEvent GameComplete()
+        ElseIf _isrunning And deal = 1 Then
             _Round.nextround()
         End If
     End Sub

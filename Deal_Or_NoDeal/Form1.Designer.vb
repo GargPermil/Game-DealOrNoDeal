@@ -65,6 +65,7 @@ Partial Class Form1
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +74,7 @@ Partial Class Form1
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -434,9 +436,9 @@ Partial Class Form1
         '
         'Previous_deal_board
         '
-        Me.Previous_deal_board.Location = New System.Drawing.Point(1194, 118)
+        Me.Previous_deal_board.Location = New System.Drawing.Point(1094, 118)
         Me.Previous_deal_board.Name = "Previous_deal_board"
-        Me.Previous_deal_board.Size = New System.Drawing.Size(150, 500)
+        Me.Previous_deal_board.Size = New System.Drawing.Size(250, 530)
         Me.Previous_deal_board.TabIndex = 3
         Me.Previous_deal_board.TabStop = False
         '
@@ -483,7 +485,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Button15)
         Me.Panel2.Controls.Add(Me.Button17)
         Me.Panel2.Controls.Add(Me.Button16)
-        Me.Panel2.Location = New System.Drawing.Point(687, 75)
+        Me.Panel2.Location = New System.Drawing.Point(421, 54)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(537, 332)
         Me.Panel2.TabIndex = 33
@@ -494,16 +496,16 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.ListView1)
         Me.Panel3.Controls.Add(Me.TextBox1)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Location = New System.Drawing.Point(368, 364)
+        Me.Panel3.Location = New System.Drawing.Point(353, 144)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(600, 300)
+        Me.Panel3.Size = New System.Drawing.Size(700, 450)
         Me.Panel3.TabIndex = 34
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 260)
+        Me.Button1.Location = New System.Drawing.Point(9, 366)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(579, 35)
+        Me.Button1.Size = New System.Drawing.Size(688, 64)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "&Start"
         Me.Button1.UseVisualStyleBackColor = True
@@ -512,11 +514,11 @@ Partial Class Form1
         '
         Me.ListView1.AllowColumnReorder = True
         Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListView1.Location = New System.Drawing.Point(6, 27)
+        Me.ListView1.Location = New System.Drawing.Point(9, 66)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
-        Me.ListView1.Size = New System.Drawing.Size(579, 227)
+        Me.ListView1.Size = New System.Drawing.Size(688, 294)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 2
         Me.ListView1.TileSize = New System.Drawing.Size(1, 1)
@@ -526,25 +528,35 @@ Partial Class Form1
         'ImageList1
         '
         Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(100, 100)
+        Me.ImageList1.ImageSize = New System.Drawing.Size(250, 250)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 1)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(84, 11)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(449, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(592, 49)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(3, 4)
+        Me.Label2.Location = New System.Drawing.Point(15, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Enter Name"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Location = New System.Drawing.Point(12, 650)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox4.TabIndex = 35
+        Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Visible = False
         '
         'Form1
         '
@@ -552,6 +564,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1356, 736)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
@@ -572,6 +585,7 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -617,5 +631,6 @@ Partial Class Form1
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 
 End Class

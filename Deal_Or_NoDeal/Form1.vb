@@ -3,6 +3,7 @@
     Dim GameEng As Game_Engine
     Dim img_money_board As New Bitmap(350, 600)
     Dim img_money(26) As Bitmap
+    Dim WithEvents gameevents As Game_Engine
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Width = Screen.PrimaryScreen.Bounds.Width
@@ -12,6 +13,8 @@
         Label1.Left = (Me.Width - Label1.Width) / 2
         Label1.Top = 10
         MoneyBoard1.Top = (Me.Height - MoneyBoard1.Height - 30) / 2
+        Panel1.Left = (Me.Width - Panel1.Width) / 2
+        Panel1.Top = (Me.Height - Panel1.Height) / 2
         Panel2.Left = (Me.Width - Panel2.Width) / 2
         Panel3.Left = (Me.Width - Panel3.Width) / 2
         Panel3.Top = (Me.Height - Panel3.Height) / 2
@@ -89,7 +92,7 @@
 
     Private Sub initialize_previous_deal_panel()
         Dim y As Integer = 0
-        Dim img_previous_deal_panel As New Bitmap(150, 400)
+        Dim img_previous_deal_panel As New Bitmap(250, 530)
         Dim g_panel As Graphics = Graphics.FromImage(img_previous_deal_panel)
         Dim path As String = Application.StartupPath & "\images\Orange.png"
         Dim fo As Font = New Font("Arial", 8)
@@ -102,8 +105,8 @@
             g.DrawString(GameEng.PreviousBankerOffer(i).ToString, fo, Brushes.White, 235, 30, sf)
             g.Save()
             g.Dispose()
-            g_panel.DrawImage(tmp_img, 0, y, 150, 36)
-            y += 40
+            g_panel.DrawImage(tmp_img, 0, y, 250, 60)
+            y += 65
         Next
         sf.Dispose()
         Previous_deal_board.Image = img_previous_deal_panel
@@ -133,14 +136,13 @@
         initialize_moneyboard()
         MoneyBoard1.Image = img_money_board
         initialize_round()
-        If GameEng.getroundcompleted Then
-            Panel1.Left = (Me.Width - Panel1.Width) / 2
-            Panel1.Top = (Me.Height - Panel1.Height) / 2
-            initialize_deal_panel()
-            initialize_previous_deal_panel()
-            Panel1.Visible = True
-            Previous_deal_board.Visible = True
-        End If
+    End Sub
+
+    Private Sub gameevents_DealOrNoDealEvent()
+        initialize_deal_panel()
+        initialize_previous_deal_panel()
+        Panel1.Visible = True
+        Previous_deal_board.Visible = True
     End Sub
 
     Private Sub initialize_bag()
@@ -203,15 +205,15 @@
     End Sub
 
     Private Sub initialize_start_panel()
-        Dim path As String = Application.StartupPath & "\images\icobag.png"
-        Dim fo As Font = New Font("Arial", 30)
+        Dim path As String = Application.StartupPath & "\images\bag.png"
+        Dim fo As Font = New Font("Arial", 150)
         Dim sf As StringFormat = New StringFormat()
         sf.Alignment = StringAlignment.Center
         sf.LineAlignment = StringAlignment.Center
         For i As Integer = 1 To 26
             Dim img_bag As New Bitmap(path)
             Dim g As Graphics = Graphics.FromImage(img_bag)
-            g.DrawString(i, fo, Brushes.Black, 35, 30, sf)
+            g.DrawString(i, fo, Brushes.Black, 176, 160, sf)
             g.Save()
             g.Dispose()
             ImageList1.Images.Add(img_bag)
@@ -469,5 +471,12 @@
         initialize_userspace()
         Panel3.Visible = False
         Panel2.Visible = True
+        AddHandler GameEng.DealOrNoDealEvent, AddressOf Me.gameevents_DealOrNoDealEvent
+    End Sub
+
+
+
+    Private Sub gameevents_GameComplete() Handles gameevents.GameComplete
+
     End Sub
 End Class
