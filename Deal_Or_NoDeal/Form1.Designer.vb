@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -58,6 +59,12 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.MoneyBoard1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +72,7 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -83,7 +91,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(86, 286)
+        Me.Panel1.Location = New System.Drawing.Point(5, 231)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(357, 144)
         Me.Panel1.TabIndex = 6
@@ -480,12 +488,71 @@ Partial Class Form1
         Me.Panel2.Size = New System.Drawing.Size(537, 332)
         Me.Panel2.TabIndex = 33
         '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Button1)
+        Me.Panel3.Controls.Add(Me.ListView1)
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Location = New System.Drawing.Point(368, 364)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(600, 300)
+        Me.Panel3.TabIndex = 34
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 260)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(579, 35)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "&Start"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.AllowColumnReorder = True
+        Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListView1.Location = New System.Drawing.Point(6, 27)
+        Me.ListView1.MultiSelect = False
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.ShowGroups = False
+        Me.ListView1.Size = New System.Drawing.Size(579, 227)
+        Me.ListView1.SmallImageList = Me.ImageList1
+        Me.ListView1.TabIndex = 2
+        Me.ListView1.TileSize = New System.Drawing.Size(1, 1)
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.List
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(100, 100)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(72, 1)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(449, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(3, 4)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Enter Name"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1356, 736)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox3)
@@ -503,6 +570,8 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -542,5 +611,11 @@ Partial Class Form1
     Friend WithEvents Button27 As System.Windows.Forms.Button
     Friend WithEvents Button28 As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

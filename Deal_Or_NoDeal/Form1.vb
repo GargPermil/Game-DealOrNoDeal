@@ -13,12 +13,10 @@
         Label1.Top = 10
         MoneyBoard1.Top = (Me.Height - MoneyBoard1.Height - 30) / 2
         Panel2.Left = (Me.Width - Panel2.Width) / 2
-        GameEng = New Game_Engine("hello", 4)
-        initialize_moneyboard()
-        MoneyBoard1.Image = img_money_board
-        initialize_round()
-        initialize_bag()
-        initialize_userspace()
+        Panel3.Left = (Me.Width - Panel3.Width) / 2
+        Panel3.Top = (Me.Height - Panel3.Height) / 2
+        Panel2.Visible = False
+        initialize_start_panel()
     End Sub
 
     Private Sub Form1_Move(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Move
@@ -92,24 +90,22 @@
     Private Sub initialize_previous_deal_panel()
         Dim y As Integer = 0
         Dim img_previous_deal_panel As New Bitmap(150, 400)
-        Dim tmp_img As Bitmap
         Dim g_panel As Graphics = Graphics.FromImage(img_previous_deal_panel)
         Dim path As String = Application.StartupPath & "\images\Orange.png"
-        Dim tmp_orig_img As New Bitmap(path)
         Dim fo As Font = New Font("Arial", 8)
         Dim sf As StringFormat = New StringFormat()
         sf.Alignment = StringAlignment.Far
         sf.LineAlignment = StringAlignment.Center
         For i As Integer = 0 To GameEng.PreviousBankerOffer.Count - 1
-            tmp_img = New Bitmap(tmp_orig_img)
+            Dim tmp_img As Bitmap = New Bitmap(path)
             Dim g As Graphics = Graphics.FromImage(tmp_img)
             g.DrawString(GameEng.PreviousBankerOffer(i).ToString, fo, Brushes.White, 235, 30, sf)
             g.Save()
             g.Dispose()
-            sf.Dispose()
             g_panel.DrawImage(tmp_img, 0, y, 150, 36)
             y += 40
         Next
+        sf.Dispose()
         Previous_deal_board.Image = img_previous_deal_panel
     End Sub
 
@@ -204,6 +200,50 @@
         g.Dispose()
         sf.Dispose()
         PictureBox3.Image = img_user_space
+    End Sub
+
+    Private Sub initialize_start_panel()
+        Dim path As String = Application.StartupPath & "\images\icobag.png"
+        Dim fo As Font = New Font("Arial", 30)
+        Dim sf As StringFormat = New StringFormat()
+        sf.Alignment = StringAlignment.Center
+        sf.LineAlignment = StringAlignment.Center
+        For i As Integer = 1 To 26
+            Dim img_bag As New Bitmap(path)
+            Dim g As Graphics = Graphics.FromImage(img_bag)
+            g.DrawString(i, fo, Brushes.Black, 35, 30, sf)
+            g.Save()
+            g.Dispose()
+            ImageList1.Images.Add(img_bag)
+        Next
+
+        ListView1.Items.Add(" 1", 0)
+        ListView1.Items.Add(" 2", 1)
+        ListView1.Items.Add(" 3", 2)
+        ListView1.Items.Add("4", 3)
+        ListView1.Items.Add("5", 4)
+        ListView1.Items.Add("6", 5)
+        ListView1.Items.Add("7", 6)
+        ListView1.Items.Add("8", 7)
+        ListView1.Items.Add("9", 8)
+        ListView1.Items.Add("10", 9)
+        ListView1.Items.Add("11", 10)
+        ListView1.Items.Add("12", 11)
+        ListView1.Items.Add("13", 12)
+        ListView1.Items.Add("14", 13)
+        ListView1.Items.Add("15", 14)
+        ListView1.Items.Add("16", 15)
+        ListView1.Items.Add("17", 16)
+        ListView1.Items.Add("18", 17)
+        ListView1.Items.Add("19", 18)
+        ListView1.Items.Add("20", 19)
+        ListView1.Items.Add("21", 20)
+        ListView1.Items.Add("22", 21)
+        ListView1.Items.Add("23", 22)
+        ListView1.Items.Add("24", 23)
+        ListView1.Items.Add("25", 24)
+        ListView1.Items.Add("26", 25)
+
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -418,5 +458,16 @@
             Button24.Visible = False
             Button24.Enabled = False
         End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        GameEng = New Game_Engine(TextBox1.Text, ListView1.SelectedItems(0).ImageIndex + 1)
+        initialize_moneyboard()
+        MoneyBoard1.Image = img_money_board
+        initialize_round()
+        initialize_bag()
+        initialize_userspace()
+        Panel3.Visible = False
+        Panel2.Visible = True
     End Sub
 End Class
