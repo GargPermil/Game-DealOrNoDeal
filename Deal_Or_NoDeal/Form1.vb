@@ -183,10 +183,10 @@
 
     Private Sub initialize_userspace()
         Dim path As String = Application.StartupPath & "\images\bag.png"
-        Dim img_user_space As New Bitmap(350, 70)
+        Dim img_user_space As New Bitmap(500, 70)
         Dim tmp_img As New Bitmap(path)
         Dim g As Graphics = Graphics.FromImage(img_user_space)
-        Dim fo As Font = New Font("Arial", 30)
+        Dim fo As Font = New Font("Arial", 20)
         Dim sf As StringFormat = New StringFormat()
         sf.Alignment = StringAlignment.Center
         sf.LineAlignment = StringAlignment.Center
@@ -194,10 +194,10 @@
         g.FillRectangle(New SolidBrush(Color.FromArgb(200, Color.OrangeRed)), 4, 10, 82, 57)
         path = Application.StartupPath & "\images\user.png"
         tmp_img = New Bitmap(path)
-        g.DrawImage(tmp_img, 105, 0, 70, 70)
+        g.DrawImage(tmp_img, 100, 0, 70, 70)
         g.DrawString(GameEng.get_player_bag, fo, Brushes.Black, 45, 41, sf)
         sf.Alignment = StringAlignment.Near
-        g.DrawString(GameEng.get_player_name, fo, Brushes.DarkOrange, 190, 35, sf)
+        g.DrawString(GameEng.get_player_name, fo, Brushes.DarkOrange, 175, 35, sf)
         g.Save()
         g.Dispose()
         sf.Dispose()

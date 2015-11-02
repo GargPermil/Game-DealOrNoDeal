@@ -144,6 +144,7 @@
     End Sub
 
     Private Sub initialize_bags()
+        Dim tmpvar As Integer
         bags(0).open = False
         bags(1).open = False
         bags(2).open = False
@@ -176,6 +177,14 @@
         For i = 0 To 25
             tmp(i) = i
         Next
+        For i = 0 To 25 Step i
+            Dim j As Integer = 25 - i
+            tmpidx = GetRandom(0, j)
+            tmpvar = tmp(tmpidx)
+            tmp(tmpidx) = tmp(j)
+            tmp(j) = tmpvar
+        Next
+
         For i = 0 To 25
             tmpidx = GetRandom(i, 25)
             bags(i).moneyidx = tmp(tmpidx)
@@ -328,6 +337,24 @@
         If _bankeroffer <> 0 Then
             _previousbankoffer.Insert(0, _bankeroffer)
         End If
+        Select Case _Round.roundno
+            Case 1
+                average *= 0.3
+            Case 2
+                average *= 0.4
+            Case 3
+                average *= 0.5
+            Case 4
+                average *= 0.6
+            Case 5
+                average *= 0.7
+            Case 6
+                average *= 0.8
+            Case 7
+                average *= 0.88
+            Case 8
+                average *= 0.96
+        End Select
         _bankeroffer = average
     End Sub
 #End Region
