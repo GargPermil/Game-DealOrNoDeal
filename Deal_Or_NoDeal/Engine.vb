@@ -71,7 +71,7 @@
     Dim remainingbag As Integer = 26
     Private _wonamount As Integer = 0
     Private _isrunning As Boolean = True
-    Private _bankeroffer As Integer
+    Private _bankeroffer As String
     Private _Round As round
     Private _previousbankoffer As New ArrayList()
 #End Region
@@ -108,7 +108,7 @@
         End Get
     End Property
 
-    Public ReadOnly Property get_Banker_offer As Integer
+    Public ReadOnly Property get_Banker_offer As String
         Get
             Return _bankeroffer
         End Get
@@ -288,7 +288,7 @@
         Return bags(bagno - 1).open
     End Function
 
-    Public Function openbag(ByVal bagno As Integer) As Integer
+    Public Function openbag(ByVal bagno As Integer) As String
         Dim _bagno As Integer = bagno - 1
         If bagno > 0 And bagno < 27 And _Round.isactive = True Then
             If bags(_bagno).open = False And _bagno <> cplayer.bag Then
@@ -300,7 +300,7 @@
                     makedealamount()
                     RaiseEvent DealOrNoDealEvent()
                 End If
-                Return moneyboard(bags(_bagno).moneyidx).amount
+                Return Add_commas(moneyboard(bags(_bagno).moneyidx).amount)
             End If
         ElseIf remainingbag = 2 Then
             bags(_bagno).open = True
@@ -355,7 +355,82 @@
             Case 8
                 average *= 0.96
         End Select
-        _bankeroffer = average
+        _bankeroffer = Add_commas(average)
     End Sub
+
+    Private Function Add_commas(ByVal amt As Integer) As String
+        Dim rtnamt, tmp As String
+        tmp = amt.ToString()
+        If tmp.Length < 4 Then
+            rtnamt = tmp
+        ElseIf tmp.Length < 6 Then
+            If tmp.Length = 5 Then
+                rtnamt = tmp.Substring(0, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(2)
+            Else
+                rtnamt = tmp.Substring(0, 1)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(1)
+            End If
+
+        ElseIf tmp.Length < 8 Then
+            If tmp.Length = 7 Then
+                rtnamt = tmp.Substring(0, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(2, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(4)
+            Else
+                rtnamt = tmp.Substring(0, 1)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(1, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(3)
+            End If
+
+        ElseIf tmp.Length < 10 Then
+            If tmp.Length = 9 Then
+                rtnamt = tmp.Substring(0, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(2, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(4, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(6)
+            Else
+                rtnamt = tmp.Substring(0, 1)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(1, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(3, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(5)
+            End If
+        ElseIf tmp.Length < 12 Then
+            If tmp.Length = 11 Then
+                rtnamt = tmp.Substring(0, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(2, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(4, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(6, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(8)
+            Else
+                rtnamt = tmp.Substring(0, 1)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(1, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(3, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(5, 2)
+                rtnamt &= ","
+                rtnamt &= tmp.Substring(7)
+            End If
+        End If
+            Return rtnamt
+    End Function
 #End Region
 End Class
