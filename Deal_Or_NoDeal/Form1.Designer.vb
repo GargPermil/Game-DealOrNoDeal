@@ -25,10 +25,6 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -65,16 +61,12 @@ Partial Class Form1
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Previous_deal_board, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -87,43 +79,6 @@ Partial Class Form1
         Me.Label1.Size = New System.Drawing.Size(306, 42)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Deal Or No Deal"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(5, 231)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(357, 144)
-        Me.Panel1.TabIndex = 6
-        Me.Panel1.Visible = False
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(184, 93)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(170, 48)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "&NoDeal"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(3, 93)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(170, 48)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "&Deal"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(350, 84)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Button5
         '
@@ -549,24 +504,13 @@ Partial Class Form1
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Enter Name"
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.Location = New System.Drawing.Point(12, 650)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox4.TabIndex = 35
-        Me.PictureBox4.TabStop = False
-        Me.PictureBox4.Visible = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1356, 736)
-        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Previous_deal_board)
@@ -576,8 +520,6 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Form1"
         Me.Text = "Deal Or No Deal"
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Previous_deal_board, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -585,7 +527,6 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -594,10 +535,6 @@ Partial Class Form1
     Friend WithEvents MoneyBoard1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Previous_deal_board As System.Windows.Forms.PictureBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
@@ -631,6 +568,5 @@ Partial Class Form1
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 
 End Class

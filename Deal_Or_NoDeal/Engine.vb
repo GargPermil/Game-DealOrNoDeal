@@ -65,6 +65,11 @@
         End Sub
     End Structure
 
+    Public Enum Deal_option
+        Deal = 0
+        No_Deal = 1
+    End Enum
+
     Public ReadOnly moneyboard(25) As Money
     Private bags(25) As bag
     Private cplayer As player
@@ -360,6 +365,7 @@
 
     Private Function Add_commas(ByVal amt As Integer) As String
         Dim rtnamt, tmp As String
+        rtnamt = ""
         tmp = amt.ToString()
         If tmp.Length < 4 Then
             rtnamt = tmp
@@ -430,7 +436,7 @@
                 rtnamt &= tmp.Substring(7)
             End If
         End If
-            Return rtnamt
+        Return rtnamt
     End Function
 #End Region
 End Class

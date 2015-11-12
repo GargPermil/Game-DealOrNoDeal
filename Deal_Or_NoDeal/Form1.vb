@@ -13,8 +13,6 @@
         Label1.Left = (Me.Width - Label1.Width) / 2
         Label1.Top = 10
         MoneyBoard1.Top = (Me.Height - MoneyBoard1.Height - 30) / 2
-        Panel1.Left = (Me.Width - Panel1.Width) / 2
-        Panel1.Top = (Me.Height - Panel1.Height) / 2
         Panel2.Left = (Me.Width - Panel2.Width) / 2
         Panel3.Left = (Me.Width - Panel3.Width) / 2
         Panel3.Top = (Me.Height - Panel3.Height) / 2
@@ -112,36 +110,22 @@
         Previous_deal_board.Image = img_previous_deal_panel
     End Sub
 
-    Private Sub initialize_deal_panel()
-        Dim path As String = Application.StartupPath & "\images\Orange.png"
-        Dim img_deal_amount As New Bitmap(350, 84)
-        Dim tmp_img As New Bitmap(path)
-        Dim g As Graphics = Graphics.FromImage(tmp_img)
-        Dim fo As Font = New Font("Arial", 8)
-        Dim sf As StringFormat = New StringFormat()
-        sf.Alignment = StringAlignment.Far
-        sf.LineAlignment = StringAlignment.Center
-        g.DrawString(GameEng.get_Banker_offer, fo, Brushes.White, 235, 30, sf)
-        g.Save()
-        g.Dispose()
-        sf.Dispose()
-        g = Graphics.FromImage(img_deal_amount)
-        g.DrawImage(tmp_img, 0, 0, 350, 84)
-        g.Dispose()
-        PictureBox1.Image = img_deal_amount
-    End Sub
-
     Private Sub Reqtoopenbag(ByVal bagno As Integer)
-        GameEng.openbag(bagno)
+        Form2.Amount = GameEng.openbag(bagno)
+        Form2.ShowDialog()
         initialize_moneyboard()
         MoneyBoard1.Image = img_money_board
         initialize_round()
     End Sub
 
     Private Sub gameevents_DealOrNoDealEvent()
-        initialize_deal_panel()
+        Form3.Game_Obj = GameEng
+        If Form3.ShowDialog() = Windows.Forms.DialogResult.Yes Then
+            GameEng.DealOrNoDeal(Game_Engine.Deal_option.Deal)
+        Else
+            GameEng.DealOrNoDeal(Game_Engine.Deal_option.No_Deal)
+        End If
         initialize_previous_deal_panel()
-        Panel1.Visible = True
         Previous_deal_board.Visible = True
     End Sub
 
@@ -246,20 +230,6 @@
         ListView1.Items.Add("25", 24)
         ListView1.Items.Add("26", 25)
 
-    End Sub
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        GameEng.DealOrNoDeal(0)
-        Panel1.Visible = False
-        initialize_round()
-        Previous_deal_board.Visible = False
-    End Sub
-
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        GameEng.DealOrNoDeal(1)
-        Panel1.Visible = False
-        initialize_round()
-        Previous_deal_board.Visible = False
     End Sub
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
@@ -474,9 +444,7 @@
         AddHandler GameEng.DealOrNoDealEvent, AddressOf Me.gameevents_DealOrNoDealEvent
     End Sub
 
-
-
-    Private Sub gameevents_GameComplete() Handles gameevents.GameComplete
+    Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class
