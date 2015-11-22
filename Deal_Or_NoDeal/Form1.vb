@@ -116,17 +116,20 @@
         initialize_moneyboard()
         MoneyBoard1.Image = img_money_board
         initialize_round()
+        GameEng.RiseEvents()
     End Sub
 
     Private Sub gameevents_DealOrNoDealEvent()
         Form3.Game_Obj = GameEng
+        initialize_previous_deal_panel()
+        Previous_deal_board.Visible = True
         If Form3.ShowDialog() = Windows.Forms.DialogResult.Yes Then
             GameEng.DealOrNoDeal(Game_Engine.Deal_option.Deal)
         Else
             GameEng.DealOrNoDeal(Game_Engine.Deal_option.No_Deal)
         End If
-        initialize_previous_deal_panel()
-        Previous_deal_board.Visible = True
+        Previous_deal_board.Visible = False
+        GameEng.RiseEvents()
     End Sub
 
     Private Sub initialize_bag()
@@ -433,18 +436,57 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        GameEng = New Game_Engine(TextBox1.Text, ListView1.SelectedItems(0).ImageIndex + 1)
-        initialize_moneyboard()
-        MoneyBoard1.Image = img_money_board
-        initialize_round()
-        initialize_bag()
-        initialize_userspace()
-        Panel3.Visible = False
-        Panel2.Visible = True
-        AddHandler GameEng.DealOrNoDealEvent, AddressOf Me.gameevents_DealOrNoDealEvent
+        If TextBox1.Text = "" Then
+            MsgBox("Enter Your Name")
+        Else
+            GameEng = New Game_Engine(TextBox1.Text, ListView1.SelectedItems(0).ImageIndex + 1)
+            initialize_moneyboard()
+            MoneyBoard1.Image = img_money_board
+            initialize_round()
+            initialize_bag()
+            initialize_userspace()
+            Panel3.Visible = False
+            Panel2.Visible = True
+            AddHandler GameEng.DealOrNoDealEvent, AddressOf Me.gameevents_DealOrNoDealEvent
+            AddHandler GameEng.GameComplete, AddressOf Me.gameevents_GameComplete
+            AddHandler GameEng.Last2Bags, AddressOf Me.gameevents_Last2Bags
+        End If
     End Sub
 
     Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
+    End Sub
+
+    Private Sub gameevents_GameComplete()
+        Form4.amount = GameEng.Get_Won_Money
+        Form4.type = GameEng.get_won_type
+        Form4.ShowDialog()
+        Me.Close()
+    End Sub
+
+    Private Sub gameevents_Last2Bags()
+        Panel1.Visible = True
+        Panel1.Left = Panel2.Left
+        Panel1.Top = Panel2.Top
+        Button2.Text = GameEng.get_player_bag
+        Button3.Text = GameEng.get_final_bag
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        GameEng.openbag(GameEng.get_player_bag)
+        GameEng.RiseEvents()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        GameEng.openbag(GameEng.get_final_bag)
+        GameEng.RiseEvents()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        Dim regex As System.Text.RegularExpressions.Regex = New System.Text.RegularExpressions.Regex("[^A-Za-z\s]")
+        Dim tmp1 As Boolean = regex.IsMatch(TextBox1.Text)
+        If tmp1 Then
+            Beep()
+        End If
     End Sub
 End Class

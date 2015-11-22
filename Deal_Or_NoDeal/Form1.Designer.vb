@@ -25,8 +25,20 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Button28 = New System.Windows.Forms.Button()
+        Me.Button24 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button26 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -35,38 +47,33 @@ Partial Class Form1
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
         Me.Button18 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.Button25 = New System.Windows.Forms.Button()
-        Me.Button26 = New System.Windows.Forms.Button()
-        Me.Button27 = New System.Windows.Forms.Button()
-        Me.Button28 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Previous_deal_board = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.MoneyBoard1 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Previous_deal_board = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.MoneyBoard1 = New System.Windows.Forms.PictureBox()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Previous_deal_board, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -80,6 +87,87 @@ Partial Class Form1
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Deal Or No Deal"
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Controls.Add(Me.Button25)
+        Me.Panel2.Controls.Add(Me.Button28)
+        Me.Panel2.Controls.Add(Me.Button24)
+        Me.Panel2.Controls.Add(Me.Button5)
+        Me.Panel2.Controls.Add(Me.Button23)
+        Me.Panel2.Controls.Add(Me.Button22)
+        Me.Panel2.Controls.Add(Me.Button27)
+        Me.Panel2.Controls.Add(Me.Button21)
+        Me.Panel2.Controls.Add(Me.Button6)
+        Me.Panel2.Controls.Add(Me.Button20)
+        Me.Panel2.Controls.Add(Me.Button26)
+        Me.Panel2.Controls.Add(Me.Button19)
+        Me.Panel2.Controls.Add(Me.Button7)
+        Me.Panel2.Controls.Add(Me.Button8)
+        Me.Panel2.Controls.Add(Me.Button9)
+        Me.Panel2.Controls.Add(Me.Button10)
+        Me.Panel2.Controls.Add(Me.Button11)
+        Me.Panel2.Controls.Add(Me.Button12)
+        Me.Panel2.Controls.Add(Me.Button13)
+        Me.Panel2.Controls.Add(Me.Button14)
+        Me.Panel2.Controls.Add(Me.Button18)
+        Me.Panel2.Controls.Add(Me.Button15)
+        Me.Panel2.Controls.Add(Me.Button17)
+        Me.Panel2.Controls.Add(Me.Button16)
+        Me.Panel2.Location = New System.Drawing.Point(421, 54)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(537, 332)
+        Me.Panel2.TabIndex = 33
+        '
+        'Button4
+        '
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Image = Global.Deal_Or_NoDeal.My.Resources.Resources.icobag
+        Me.Button4.Location = New System.Drawing.Point(3, 3)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(70, 60)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button25
+        '
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
+        Me.Button25.Location = New System.Drawing.Point(348, 201)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(70, 60)
+        Me.Button25.TabIndex = 29
+        Me.Button25.Text = "Button25"
+        Me.Button25.UseVisualStyleBackColor = True
+        '
+        'Button28
+        '
+        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button28.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
+        Me.Button28.Location = New System.Drawing.Point(307, 267)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(70, 60)
+        Me.Button28.TabIndex = 32
+        Me.Button28.Text = "Button28"
+        Me.Button28.UseVisualStyleBackColor = True
+        '
+        'Button24
+        '
+        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button24.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
+        Me.Button24.Location = New System.Drawing.Point(272, 201)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(70, 60)
+        Me.Button24.TabIndex = 28
+        Me.Button24.Text = "Button24"
+        Me.Button24.UseVisualStyleBackColor = True
+        '
         'Button5
         '
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -92,6 +180,54 @@ Partial Class Form1
         Me.Button5.Text = "Button5"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Button23
+        '
+        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
+        Me.Button23.Location = New System.Drawing.Point(196, 201)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(70, 60)
+        Me.Button23.TabIndex = 27
+        Me.Button23.Text = "Button23"
+        Me.Button23.UseVisualStyleBackColor = True
+        '
+        'Button22
+        '
+        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.Image = CType(resources.GetObject("Button22.Image"), System.Drawing.Image)
+        Me.Button22.Location = New System.Drawing.Point(120, 201)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(70, 60)
+        Me.Button22.TabIndex = 26
+        Me.Button22.Text = "Button22"
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'Button27
+        '
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button27.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
+        Me.Button27.Location = New System.Drawing.Point(231, 267)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(70, 60)
+        Me.Button27.TabIndex = 31
+        Me.Button27.Text = "Button27"
+        Me.Button27.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
+        Me.Button21.Location = New System.Drawing.Point(383, 135)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(70, 60)
+        Me.Button21.TabIndex = 25
+        Me.Button21.Text = "Button21"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
         'Button6
         '
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -103,6 +239,42 @@ Partial Class Form1
         Me.Button6.TabIndex = 10
         Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
+        Me.Button20.Location = New System.Drawing.Point(307, 135)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(70, 60)
+        Me.Button20.TabIndex = 24
+        Me.Button20.Text = "Button20"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'Button26
+        '
+        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button26.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
+        Me.Button26.Location = New System.Drawing.Point(155, 267)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(70, 60)
+        Me.Button26.TabIndex = 30
+        Me.Button26.Text = "Button26"
+        Me.Button26.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
+        Me.Button19.Location = New System.Drawing.Point(231, 135)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(70, 60)
+        Me.Button19.TabIndex = 23
+        Me.Button19.Text = "Button19"
+        Me.Button19.UseVisualStyleBackColor = True
         '
         'Button7
         '
@@ -200,6 +372,18 @@ Partial Class Form1
         Me.Button14.Text = "Button14"
         Me.Button14.UseVisualStyleBackColor = True
         '
+        'Button18
+        '
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
+        Me.Button18.Location = New System.Drawing.Point(155, 135)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(70, 60)
+        Me.Button18.TabIndex = 22
+        Me.Button18.Text = "Button18"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
         'Button15
         '
         Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -211,18 +395,6 @@ Partial Class Form1
         Me.Button15.TabIndex = 19
         Me.Button15.Text = "Button15"
         Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Button16
-        '
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.Image = CType(resources.GetObject("Button16.Image"), System.Drawing.Image)
-        Me.Button16.Location = New System.Drawing.Point(424, 69)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(70, 60)
-        Me.Button16.TabIndex = 20
-        Me.Button16.Text = "Button16"
-        Me.Button16.UseVisualStyleBackColor = True
         '
         'Button17
         '
@@ -236,214 +408,17 @@ Partial Class Form1
         Me.Button17.Text = "Button17"
         Me.Button17.UseVisualStyleBackColor = True
         '
-        'Button18
+        'Button16
         '
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
-        Me.Button18.Location = New System.Drawing.Point(155, 135)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(70, 60)
-        Me.Button18.TabIndex = 22
-        Me.Button18.Text = "Button18"
-        Me.Button18.UseVisualStyleBackColor = True
-        '
-        'Button19
-        '
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
-        Me.Button19.Location = New System.Drawing.Point(231, 135)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(70, 60)
-        Me.Button19.TabIndex = 23
-        Me.Button19.Text = "Button19"
-        Me.Button19.UseVisualStyleBackColor = True
-        '
-        'Button20
-        '
-        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
-        Me.Button20.Location = New System.Drawing.Point(307, 135)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(70, 60)
-        Me.Button20.TabIndex = 24
-        Me.Button20.Text = "Button20"
-        Me.Button20.UseVisualStyleBackColor = True
-        '
-        'Button21
-        '
-        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
-        Me.Button21.Location = New System.Drawing.Point(383, 135)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(70, 60)
-        Me.Button21.TabIndex = 25
-        Me.Button21.Text = "Button21"
-        Me.Button21.UseVisualStyleBackColor = True
-        '
-        'Button22
-        '
-        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button22.Image = CType(resources.GetObject("Button22.Image"), System.Drawing.Image)
-        Me.Button22.Location = New System.Drawing.Point(120, 201)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(70, 60)
-        Me.Button22.TabIndex = 26
-        Me.Button22.Text = "Button22"
-        Me.Button22.UseVisualStyleBackColor = True
-        '
-        'Button23
-        '
-        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
-        Me.Button23.Location = New System.Drawing.Point(196, 201)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(70, 60)
-        Me.Button23.TabIndex = 27
-        Me.Button23.Text = "Button23"
-        Me.Button23.UseVisualStyleBackColor = True
-        '
-        'Button24
-        '
-        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button24.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
-        Me.Button24.Location = New System.Drawing.Point(272, 201)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(70, 60)
-        Me.Button24.TabIndex = 28
-        Me.Button24.Text = "Button24"
-        Me.Button24.UseVisualStyleBackColor = True
-        '
-        'Button25
-        '
-        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button25.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
-        Me.Button25.Location = New System.Drawing.Point(348, 201)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(70, 60)
-        Me.Button25.TabIndex = 29
-        Me.Button25.Text = "Button25"
-        Me.Button25.UseVisualStyleBackColor = True
-        '
-        'Button26
-        '
-        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button26.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
-        Me.Button26.Location = New System.Drawing.Point(155, 267)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(70, 60)
-        Me.Button26.TabIndex = 30
-        Me.Button26.Text = "Button26"
-        Me.Button26.UseVisualStyleBackColor = True
-        '
-        'Button27
-        '
-        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button27.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
-        Me.Button27.Location = New System.Drawing.Point(231, 267)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(70, 60)
-        Me.Button27.TabIndex = 31
-        Me.Button27.Text = "Button27"
-        Me.Button27.UseVisualStyleBackColor = True
-        '
-        'Button28
-        '
-        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button28.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
-        Me.Button28.Location = New System.Drawing.Point(307, 267)
-        Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(70, 60)
-        Me.Button28.TabIndex = 32
-        Me.Button28.Text = "Button28"
-        Me.Button28.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Image = Global.Deal_Or_NoDeal.My.Resources.Resources.icobag
-        Me.Button4.Location = New System.Drawing.Point(3, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(70, 60)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Location = New System.Drawing.Point(368, 541)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(500, 77)
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
-        '
-        'Previous_deal_board
-        '
-        Me.Previous_deal_board.Location = New System.Drawing.Point(1094, 118)
-        Me.Previous_deal_board.Name = "Previous_deal_board"
-        Me.Previous_deal_board.Size = New System.Drawing.Size(250, 530)
-        Me.Previous_deal_board.TabIndex = 3
-        Me.Previous_deal_board.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(364, 647)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(500, 77)
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
-        'MoneyBoard1
-        '
-        Me.MoneyBoard1.Location = New System.Drawing.Point(12, 44)
-        Me.MoneyBoard1.Name = "MoneyBoard1"
-        Me.MoneyBoard1.Size = New System.Drawing.Size(350, 600)
-        Me.MoneyBoard1.TabIndex = 1
-        Me.MoneyBoard1.TabStop = False
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Button4)
-        Me.Panel2.Controls.Add(Me.Button25)
-        Me.Panel2.Controls.Add(Me.Button28)
-        Me.Panel2.Controls.Add(Me.Button24)
-        Me.Panel2.Controls.Add(Me.Button5)
-        Me.Panel2.Controls.Add(Me.Button23)
-        Me.Panel2.Controls.Add(Me.Button22)
-        Me.Panel2.Controls.Add(Me.Button27)
-        Me.Panel2.Controls.Add(Me.Button21)
-        Me.Panel2.Controls.Add(Me.Button6)
-        Me.Panel2.Controls.Add(Me.Button20)
-        Me.Panel2.Controls.Add(Me.Button26)
-        Me.Panel2.Controls.Add(Me.Button19)
-        Me.Panel2.Controls.Add(Me.Button7)
-        Me.Panel2.Controls.Add(Me.Button8)
-        Me.Panel2.Controls.Add(Me.Button9)
-        Me.Panel2.Controls.Add(Me.Button10)
-        Me.Panel2.Controls.Add(Me.Button11)
-        Me.Panel2.Controls.Add(Me.Button12)
-        Me.Panel2.Controls.Add(Me.Button13)
-        Me.Panel2.Controls.Add(Me.Button14)
-        Me.Panel2.Controls.Add(Me.Button18)
-        Me.Panel2.Controls.Add(Me.Button15)
-        Me.Panel2.Controls.Add(Me.Button17)
-        Me.Panel2.Controls.Add(Me.Button16)
-        Me.Panel2.Location = New System.Drawing.Point(421, 54)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(537, 332)
-        Me.Panel2.TabIndex = 33
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.Image = CType(resources.GetObject("Button16.Image"), System.Drawing.Image)
+        Me.Button16.Location = New System.Drawing.Point(424, 69)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(70, 60)
+        Me.Button16.TabIndex = 20
+        Me.Button16.Text = "Button16"
+        Me.Button16.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -490,8 +465,9 @@ Partial Class Form1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(84, 11)
+        Me.TextBox1.MaxLength = 20
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(592, 49)
+        Me.TextBox1.Size = New System.Drawing.Size(613, 49)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
@@ -504,12 +480,115 @@ Partial Class Form1
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Enter Name"
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Location = New System.Drawing.Point(364, 70)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(536, 332)
+        Me.Panel1.TabIndex = 35
+        Me.Panel1.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.SpringGreen
+        Me.Label5.Location = New System.Drawing.Point(124, 152)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "Your Bag"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Lime
+        Me.Label4.Location = New System.Drawing.Point(93, 76)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(351, 31)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "Which Case will you choose"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Yellow
+        Me.Label3.Location = New System.Drawing.Point(111, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(319, 63)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Final Round"
+        '
+        'Button3
+        '
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Image = Global.Deal_Or_NoDeal.My.Resources.Resources.bag2
+        Me.Button3.Location = New System.Drawing.Point(290, 166)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(200, 158)
+        Me.Button3.TabIndex = 16
+        Me.Button3.Text = "88"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = Global.Deal_Or_NoDeal.My.Resources.Resources.bag2
+        Me.Button2.Location = New System.Drawing.Point(46, 168)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(200, 156)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "88"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Location = New System.Drawing.Point(368, 541)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(500, 77)
+        Me.PictureBox3.TabIndex = 7
+        Me.PictureBox3.TabStop = False
+        '
+        'Previous_deal_board
+        '
+        Me.Previous_deal_board.Location = New System.Drawing.Point(1094, 118)
+        Me.Previous_deal_board.Name = "Previous_deal_board"
+        Me.Previous_deal_board.Size = New System.Drawing.Size(250, 530)
+        Me.Previous_deal_board.TabIndex = 3
+        Me.Previous_deal_board.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(364, 647)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(500, 77)
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'MoneyBoard1
+        '
+        Me.MoneyBoard1.Location = New System.Drawing.Point(12, 44)
+        Me.MoneyBoard1.Name = "MoneyBoard1"
+        Me.MoneyBoard1.Size = New System.Drawing.Size(350, 600)
+        Me.MoneyBoard1.TabIndex = 1
+        Me.MoneyBoard1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1356, 736)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox3)
@@ -520,13 +599,15 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Form1"
         Me.Text = "Deal Or No Deal"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Previous_deal_board, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MoneyBoard1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -568,5 +649,11 @@ Partial Class Form1
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

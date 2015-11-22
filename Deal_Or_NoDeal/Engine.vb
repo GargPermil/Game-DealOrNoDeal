@@ -75,6 +75,7 @@
     Private cplayer As player
     Dim remainingbag As Integer = 26
     Private _wonamount As Integer = 0
+    Private _wontype As Integer
     Private _isrunning As Boolean = True
     Private _bankeroffer As String
     Private _Round As round
@@ -107,9 +108,9 @@
         End Get
     End Property
 
-    Public ReadOnly Property Get_Won_Money As Integer
+    Public ReadOnly Property Get_Won_Money As String
         Get
-            Return _wonamount
+            Return Add_commas(_wonamount)
         End Get
     End Property
 
@@ -130,11 +131,38 @@
             Return cplayer.name
         End Get
     End Property
+
+    Public ReadOnly Property get_won_type As Integer
+        Get
+            Return _wontype
+        End Get
+    End Property
+
+    Public ReadOnly Property get_final_bag As Integer
+        Get
+            If remainingbag = 2 Then
+                For i As Integer = 0 To 25
+                    If i <> cplayer.bag Then
+                        If bags(i).open = False Then
+                            Return i + 1
+                        End If
+                    End If
+                Next
+            End If
+            Return 0
+        End Get
+    End Property
 #End Region
 
 #Region "Events"
+#Region "EventsVariables"
+    Private evevargamecomp As Boolean = False
+    Private evevardealornodeal As Boolean = False
+    Private evevarlast2bag As Boolean = False
+#End Region
     Public Event GameComplete()
     Public Event DealOrNoDealEvent()
+    Public Event Last2Bags()
 #End Region
 
 #Region "initialize"
@@ -303,28 +331,43 @@
                 _Round.openbag()
                 If _Round.remaining_bags = 0 Then
                     makedealamount()
-                    RaiseEvent DealOrNoDealEvent()
+                    evevardealornodeal = True
+                    If remainingbag = 2 Then
+                        evevarlast2bag = True
+                    End If
                 End If
-                Return Add_commas(moneyboard(bags(_bagno).moneyidx).amount)
+                Return Add_commas(moneyboard(bags(_bagno).moneyidx).amount.ToString())
             End If
         ElseIf remainingbag = 2 Then
             bags(_bagno).open = True
             moneyboard(bags(_bagno).moneyidx).Active = False
-            For i As Integer = 0 To 25
-                If bags(i).open = False Then
-                    _wonamount = moneyboard(bags(i).moneyidx).amount
-                    _isrunning = False
-                End If
-            Next
+            _wonamount = moneyboard(bags(_bagno).moneyidx).amount
+            _isrunning = False
+            evevargamecomp = True
+            _wontype = moneyboard(bags(_bagno).moneyidx).type
         End If
         Return 0
     End Function
 
     Public Sub DealOrNoDeal(ByVal deal As String)
+        Dim tmp As Integer = 0
         If deal = 0 Then
             _wonamount = _bankeroffer
+            For i As Int16 = 0 To _bankeroffer.Length - 1
+                If _bankeroffer(i) <> "," Then
+                    tmp *= 10
+                    tmp += Integer.Parse(_bankeroffer(i))
+                End If
+            Next
+            If tmp < 100000 Then
+                _wontype = 0
+            ElseIf tmp < 250000 Then
+                _wontype = 1
+            Else
+                _wontype = 2
+            End If
             _isrunning = False
-            RaiseEvent GameComplete()
+            evevargamecomp = True
         ElseIf _isrunning And deal = 1 Then
             _Round.nextround()
         End If
@@ -344,21 +387,21 @@
         End If
         Select Case _Round.roundno
             Case 1
-                average *= 0.3
+                average *= 0.25
             Case 2
-                average *= 0.4
+                average *= 0.35
             Case 3
-                average *= 0.5
+                average *= 0.45
             Case 4
-                average *= 0.6
+                average *= 0.55
             Case 5
-                average *= 0.7
+                average *= 0.65
             Case 6
-                average *= 0.8
+                average *= 0.75
             Case 7
-                average *= 0.88
+                average *= 0.82
             Case 8
-                average *= 0.96
+                average *= 0.93
         End Select
         _bankeroffer = Add_commas(average)
     End Sub
@@ -438,5 +481,18 @@
         End If
         Return rtnamt
     End Function
+
+    Public Sub RiseEvents()
+        If evevardealornodeal Then
+            evevardealornodeal = False
+            RaiseEvent DealOrNoDealEvent()
+        ElseIf evevarlast2bag Then
+            evevarlast2bag = False
+            RaiseEvent Last2Bags()
+        ElseIf evevargamecomp Then
+            evevargamecomp = False
+            RaiseEvent GameComplete()
+        End If
+    End Sub
 #End Region
 End Class
