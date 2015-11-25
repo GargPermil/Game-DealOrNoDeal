@@ -152,6 +152,15 @@
             Return 0
         End Get
     End Property
+
+    Public ReadOnly Property get_player_bag_amount As String
+        Get
+            If _isrunning Then
+                Return 0
+            End If
+            Return Add_commas(moneyboard(bags(cplayer.bag).moneyidx).amount)
+        End Get
+    End Property
 #End Region
 
 #Region "Events"

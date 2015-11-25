@@ -460,6 +460,7 @@
     Private Sub gameevents_GameComplete()
         Form4.amount = GameEng.Get_Won_Money
         Form4.type = GameEng.get_won_type
+        Form4.Player_bag_amount = GameEng.get_player_bag_amount
         Form4.ShowDialog()
         Me.Close()
     End Sub

@@ -28,6 +28,8 @@ Partial Class Form4
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -66,7 +68,7 @@ Partial Class Form4
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(189, 194)
+        Me.Label4.Location = New System.Drawing.Point(189, 241)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(206, 46)
         Me.Label4.TabIndex = 3
@@ -78,7 +80,7 @@ Partial Class Form4
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkOrange
-        Me.Label5.Location = New System.Drawing.Point(81, 252)
+        Me.Label5.Location = New System.Drawing.Point(81, 299)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(415, 46)
         Me.Label5.TabIndex = 4
@@ -90,19 +92,41 @@ Partial Class Form4
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.OrangeRed
-        Me.Label6.Location = New System.Drawing.Point(43, 240)
+        Me.Label6.Location = New System.Drawing.Point(43, 287)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(498, 63)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "You Won Dil ki deal"
         Me.Label6.Visible = False
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(204, 201)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(29, 31)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "0"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(53, 211)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(145, 13)
+        Me.Label8.TabIndex = 6
+        Me.Label8.Text = "Your's bag having amount of "
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(584, 311)
+        Me.ClientSize = New System.Drawing.Size(584, 359)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -123,4 +147,6 @@ Partial Class Form4
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class
