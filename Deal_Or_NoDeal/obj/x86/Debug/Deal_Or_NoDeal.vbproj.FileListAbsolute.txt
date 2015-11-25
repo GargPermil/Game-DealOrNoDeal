@@ -1,24 +1,3 @@
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.exe
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.pdb
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.xml
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.Form1.resources
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.Resources.resources
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.vbproj.GenerateResource.Cache
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.exe
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.xml
-C:\Users\PERMIL GARG\Documents\Visual Studio 2010\Projects\Deal_Or_NoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.pdb
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.exe
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.xml
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.pdb
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.exe
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.pdb
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.xml
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.Form1.resources
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.Resources.resources
-E:\Projects\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.vbproj.GenerateResource.Cache
-C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.exe
-C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.xml
-C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.pdb
 C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.exe
 C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.pdb
 C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\bin\Debug\Deal_Or_NoDeal.xml
@@ -28,3 +7,6 @@ C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\
 C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.Form4.resources
 C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.Resources.resources
 C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.vbproj.GenerateResource.Cache
+C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.exe
+C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.xml
+C:\Users\PERMIL\Documents\GitHub\Game-DealOrNoDeal\Deal_Or_NoDeal\obj\x86\Debug\Deal_Or_NoDeal.pdb
